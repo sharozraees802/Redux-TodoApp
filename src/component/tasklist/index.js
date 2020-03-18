@@ -1,5 +1,6 @@
 import React from "react";
 import {connect} from 'react-redux';
+import Task from "./component/task/";
 
 class TaskList extends React.Component {
   render() {
@@ -11,7 +12,8 @@ class TaskList extends React.Component {
             <th>Action</th>
           </tr>
         </thead>
-    <tbody>{this.props.tasks.map((task,index)=><Task key={index} task={task}/>)}</tbody>
+    <tbody>
+        {this.props.tasks.map((task,index)=><Task key={index} task={task}/>)}</tbody>
       </table>
     );
   }
