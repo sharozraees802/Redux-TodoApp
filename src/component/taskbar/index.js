@@ -8,7 +8,7 @@ class TaskBar extends React.Component {
     return (
       <div>
         <input type="text" ref="task" placeholder="Add your tasks here " />
-        <button onClick={()=>this.props.addTask(this.refs.task.value)}>Add Task</button>
+        <button onClick={() => this.props.addTask(this.refs.task.value)}>Add Task</button>
       </div>
     );
   }
@@ -17,4 +17,4 @@ class TaskBar extends React.Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({ addTask }, dispatch);
 }
-export default connect(() => {},mapDispatchToProps)(TaskBar);
+export default connect(null, mapDispatchToProps)(TaskBar);
